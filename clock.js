@@ -4,14 +4,14 @@ var minuteHand = document.getElementById("minute");
 var secondHand = document.getElementById("second");
 //get DOM elements needed to set time
 
-var now = new Date();
-var hours = now.getHours();
-var minutes = now.getMinutes();
-var seconds = now.getSeconds();
-//get current time
 
-setTime = function() {
+function setTime() {
 
+  var now = new Date();
+  var hours = now.getHours();
+  var minutes = now.getMinutes();
+  var seconds = now.getSeconds();
+  //get current time
   var hourRotation = (hours / 12) * 360;
   var minuteRotation = (minutes * 6) + (seconds * 6) / 60;
   var secondRotation = seconds * 6;
